@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compliance Control Room</title>
+    <link rel="stylesheet" href="./styles.css?v=agent-copilot-heartbeat" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="top-bar">
+        <div class="top-bar__left">
+          <button class="sidebar-trigger" id="sidebarToggle" type="button" aria-controls="sidebar" aria-expanded="true">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </button>
+          <span class="wordmark">CCR</span>
+        </div>
+        <div class="top-bar__right">
+          <label class="theme-toggle">
+            <input id="themeToggle" type="checkbox" aria-label="Use light theme" />
+            <span class="theme-toggle__track">
+              <span class="theme-toggle__thumb"></span>
+            </span>
+            <span class="theme-toggle__label">Dark</span>
+          </label>
+          <span class="status">
+            <span class="status-dot" aria-hidden="true"></span>
+            Ready
+          </span>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <aside class="sidebar" id="sidebar" style="--sidebar-width: 280px;">
+          <div class="sidebar__content">
+            <div class="sidebar__label">Navigation</div>
+            <nav class="sidebar-nav" id="sidebarNav" aria-label="Compliance Control Room pages"></nav>
+          </div>
+          <div class="sidebar__resize" id="sidebarResize" aria-hidden="true"></div>
+        </aside>
+
+        <section class="main-content" id="mainContent">
+          <section class="page page--home" id="homePage" data-page="home">
+            <div class="page-action-bar" id="homeActionBar"></div>
+            <section class="graph-panel">
+              <div class="map-stage" id="mapStage"></div>
+            </section>
+          </section>
+        </section>
+      </main>
+    </div>
+    <script src="./data/catalog_bootstrap.js?v=kudora-catalog"></script>
+    <script src="./app.js?v=agent-copilot-heartbeat"></script>
+  </body>
+</html>
